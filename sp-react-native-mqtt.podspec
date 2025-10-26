@@ -1,18 +1,21 @@
 require "json"
 
-json = File.read(File.join(__dir__, "package.json"))
-package = JSON.parse(json).deep_symbolize_keys
+package = JSON.parse(File.read(File.join(__dir__, "package.json")))
 
 Pod::Spec.new do |s|
-  s.name = package[:name]
-  s.version = package[:version]
-  s.license = { type: "MIT" }
-  s.homepage = "https://github.com/SudoPlz/sp-react-native-mqtt"
-  s.authors = package[:author][:name]
-  s.summary = package[:description]
-  s.source = { git: package[:repository][:url] }
-  s.source_files = "ios/*.{h,m}"
-  s.platform = :ios, "8.0"
+  s.name         = package["name"]
+  s.version      = package["version"]
+  s.summary      = package["description"]
+  s.description  = package["description"]
+  s.homepage     = package["homepage"]
+  s.license      = package["license"]
+  s.authors      = { package["author"]["name"] => package["author"]["email"] }
+  s.platforms    = { :ios => "11.0" }
+  s.source       = { :git => package["repository"]["url"], :tag => "#{s.version}" }
 
-  s.dependency "React"
+  s.source_files = "ios/**/*.{h,m}"
+  s.requires_arc = true
+
+  s.dependency "React-Core"
+  s.dependency "MQTTClient", "~> 0.15.3"
 end

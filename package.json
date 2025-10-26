@@ -3,6 +3,17 @@
   "version": "0.6.1",
   "description": "MQTT client for react-native",
   "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "android/",
+    "ios/",
+    "sp-react-native-mqtt.podspec",
+    "react-native.config.js",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,7 +24,9 @@
   "keywords": [
     "mqtt",
     "reactnative",
-    "iot"
+    "iot",
+    "react-native",
+    "mqtt-client"
   ],
   "author": {
     "name": "Ioannis Kokkinidis",
@@ -52,5 +65,13 @@
     "url": "https://github.com/SudoPlz/react-native-mqtt/issues"
   },
   "homepage": "https://github.com/SudoPlz/react-native-mqtt#readme",
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "react": "^18.2.0",
+    "react-native": "^0.72.0"
+  },
   "packageManager": "yarn@1.22.22"
 }

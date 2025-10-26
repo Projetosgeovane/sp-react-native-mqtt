@@ -1,0 +1,30 @@
+# Ignore example and development files
+rnmqttexample/
+.vscode/
+.git/
+.github/
+
+# Ignore unnecessary files
+*.log
+*.lock
+yarn.lock
+package-lock.json
+node_modules/
+
+# Ignore build artifacts
+android/build/
+android/.gradle/
+ios/build/
+*.xcworkspace
+*.xcuserdata
+
+# Keep only necessary files for the library
+!android/
+!ios/
+!index.js
+!index.d.ts
+!package.json
+!README.md
+!sp-react-native-mqtt.podspec
+!react-native.config.js
+

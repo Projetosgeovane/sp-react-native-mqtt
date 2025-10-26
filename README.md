@@ -20,7 +20,8 @@ A [react-native](https://github.com/facebook/react-native) mqtt client module th
 
 ### Installation
 
-#### Step 1:
+#### For React Native 0.60+ (with autolinking)
+
 ```bash
 npm install sp-react-native-mqtt --save
 ```
@@ -31,56 +32,77 @@ or
 yarn add sp-react-native-mqtt
 ```
 
-#### Step 2: (Skip this step if you are using RN 0.60 or above as the module will be auto-linked)
+Then:
 
+##### iOS
 ```bash
-react-native link sp-react-native-mqtt
+cd ios && pod install && cd ..
 ```
 
+##### Android
+No additional steps required. The library will be auto-linked.
 
-#### Step 3:
-##### iOS
+#### For Expo / EAS Build
 
-Add `pod 'MQTTClient'` to your podfile and `pod install`
+This library supports Expo projects using EAS Build and prebuild:
+
+```bash
+npm install sp-react-native-mqtt --save
+```
+
+Then run prebuild:
+
+```bash
+npx expo prebuild
+```
+
+Or build with EAS:
+
+```bash
+eas build --platform ios
+eas build --platform android
+```
+
+**Note:** This library requires native modules, so it's not compatible with Expo Go. You must use development builds or EAS Build.
+
+#### Configuration
+
+The library is configured with autolinking. No manual configuration is needed for React Native 0.60+.
 
 <details>
-<summary>Alternatively you can manually link the library on iOS (click to expand)</summary>
+<summary>Manual linking (for older React Native versions < 0.60)</summary>
+
+##### iOS
 
 In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
 * Go to `node_modules` ➜ `sp-react-native-mqtt` and add `RCTMqtt.xcodeproj`
 * In XCode, in the project navigator, select your project. Add `libRCTmqtt.a` and `libicucore.tbd` to your project's `Build Phases` ➜ `Link Binary With Libraries`
-* Click `RCTMqtt.xcodeproj` in the project navigator and go the `Build Settings` tab. Make sure 'All' is toggled on (instead of 'Basic'). In the `Search Paths` section, look for `Header Search Paths` and make sure it contains both `$(SRCROOT)/../../react-native/React` - mark  as `recursive`.
-
-</details>
-
-
+* Click `RCTMqtt.xcodeproj` in the project navigator and go the `Build Settings` tab. Make sure 'All' is toggled on (instead of 'Basic'). In the `Search Paths` section, look for `Header Search Paths` and make sure it contains both `$(SRCROOT)/../../react-native/React` - mark as `recursive`.
 
 ##### Android
 
 * Add the following line in `getPackages()` method inside the `ReactNativeHost` object in `android/app/src/main/java/.../MainApplication.java`:
 
 ```java
-
-packages.add(new RCTMqttPackage());           // as a child of the getPackages() returned array
-
+packages.add(new RCTMqttPackage());
 ```
 
 Don't forget to include `import com.tuanpm.RCTMqtt.*;` with the other imports at the top.
 
-* Append the following lines to `android/settings.gradle` before `include ':app'`:
+* Append the following lines to `android/settings.gradle`:
 
-```
+```gradle
 include ':sp-react-native-mqtt'
 project(':sp-react-native-mqtt').projectDir = new File(rootProject.projectDir,  '../node_modules/sp-react-native-mqtt/android')
-
 ```
 
+* Insert the following lines inside the dependencies block in `android/app/build.gradle`:
 
-- Insert the following lines inside the dependencies block in `android/app/build.gradle`:
+```gradle
+implementation project(':sp-react-native-mqtt')
+```
 
-```
-implementation ':sp-react-native-mqtt'
-```
+</details>
 
 
 
