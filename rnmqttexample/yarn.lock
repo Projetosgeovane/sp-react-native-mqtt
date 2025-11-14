@@ -2355,6 +2355,7 @@ fs-extra@^7.0.1:
 
 fs-minipass@^1.2.5:
   version "1.2.5"
+  integrity sha512-JhBl0skXjUPCFH7x6x61gQxrKyXsxB5gcgePLZCwfyCGGsTISMoIeObbrvVeP6Xmyaudw4TT43qV2Gz+iyd2oQ==
   dependencies:
     minipass "^2.2.1"
 
@@ -4127,6 +4128,7 @@ minipass@^2.2.1, minipass@^2.3.4:
 
 minizlib@^1.1.1:
   version "1.2.1"
+  integrity sha512-7+4oTUOWKg7AuL3vloEWekXY2/D20cevzsrNT2kGWm+39J9hGTCBv8VI5Pm5lXZ/o3/mdR4f8rflAPhnQb8mPA==
   dependencies:
     minipass "^2.2.1"
 
@@ -4205,6 +4207,7 @@ natural-compare@^1.4.0:
 
 needle@^2.2.1:
   version "2.3.0"
+  integrity sha512-QBZu7aAFR0522EyaXZM0FZ9GLpq6lvQ3uq8gteiDUp7wKdy0lSd2hPlgFwVuW1CBkfEs9PfDQsQzZghLs/psdg==
   dependencies:
     debug "^4.1.0"
     iconv-lite "^0.4.4"
@@ -5701,6 +5704,7 @@ symbol-tree@^3.2.2:
 
 tar@^4:
   version "4.4.8"
+  integrity sha512-LzHF64s5chPQQS0IYBn9IN5h3i98c12bo4NCO7e0sGM2llXQ3p2FGC5sdENN4cTW48O915Sh+x+EXx7XW96xYQ==
   dependencies:
     chownr "^1.1.1"
     fs-minipass "^1.2.5"

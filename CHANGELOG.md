@@ -18,14 +18,17 @@
 
 ### 🤖 Melhorias Android
 
-- Gradle atualizado para versão 7.4.2
-- Namespace Android adicionado (Android Gradle Plugin 7+)
-- SDK compilado atualizado para 33
-- minSdkVersion atualizado para 21
+- ✅ **Gradle atualizado** para versão 8.1.0
+- ✅ **Namespace Android** configurado (com.tuanpm.RCTMqtt)
+- ✅ **SDK atualizado**: compileSdkVersion 36, targetSdkVersion 36
+- ✅ **minSdkVersion atualizado** para 24 (Android 7.0+)
+- ✅ **safeExtGet** implementado para compatibilidade com projetos pai
+- ✅ **compileOptions** configurado (Java 8)
+- ✅ **Auto-linking completo** via react-native.config.js
 - Dependências MQTT atualizadas:
   - `org.eclipse.paho.client.mqttv3:1.2.5`
   - `org.bouncycastle:bcprov-jdk15on:1.70`
-- Suporte Java 8 (sourceCompatibility/targetCompatibility)
+- BuildToolsVersion atualizado para 34.0.0
 
 ### 📦 Package.json
 
@@ -53,7 +56,9 @@
 - React Native: 0.60+
 - Expo: 49.0.0+
 - iOS: 11.0+
-- Android: API 21+ (Android 5.0+)
+- Android: API 24+ (Android 7.0+)
+- Android Gradle Plugin: 8.1.0
+- Gradle: 8.0+
 
 ### 📝 Como Usar em Outro Projeto
 
