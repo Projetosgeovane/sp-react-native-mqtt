@@ -49,6 +49,14 @@ compileOptions {
 - `package.json` com campo `files`
 - Compatível com React Native 0.60+
 
+### 7. **BouncyCastle Atualizado** ✅
+```gradle
+implementation 'org.bouncycastle:bcprov-jdk15to18:1.78.1'
+```
+- Atualizado de `bcprov-jdk15on:1.70` para `bcprov-jdk15to18:1.78.1`
+- Compatível com Java 8-18
+- Evita conflitos com o projeto principal
+
 ---
 
 ## 📦 Arquivos Modificados
@@ -130,6 +138,7 @@ const client = await MQTT.createClient({
 | compileOptions | ❌ | ✅ |
 | Auto-linking | ❌ | ✅ |
 | Gradle Plugin | 3.2.1 | **8.1.0** ✅ |
+| BouncyCastle | bcprov-jdk15on:1.70 | **bcprov-jdk15to18:1.78.1** ✅ |
 
 ---
 

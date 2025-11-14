@@ -27,7 +27,7 @@
 - ✅ **Auto-linking completo** via react-native.config.js
 - Dependências MQTT atualizadas:
   - `org.eclipse.paho.client.mqttv3:1.2.5`
-  - `org.bouncycastle:bcprov-jdk15on:1.70`
+  - `org.bouncycastle:bcprov-jdk15to18:1.78.1` (atualizado para evitar conflitos)
 - BuildToolsVersion atualizado para 34.0.0
 
 ### 📦 Package.json

@@ -37,6 +37,7 @@ android {
 - ✅ **Namespace**: Configurado para Android Gradle Plugin 7+
 - ✅ **compileOptions**: Java 8 configurado
 - ✅ **Auto-linking**: Configurado via `react-native.config.js`
+- ✅ **BouncyCastle atualizado**: `bcprov-jdk15to18:1.78.1` (compatível com Java 8-18, evita conflitos)
 
 ---
 
